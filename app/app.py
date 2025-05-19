@@ -15,6 +15,7 @@ from flask import jsonify
 from werkzeug.security import generate_password_hash, check_password_hash
 
 
+
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'
 
@@ -337,7 +338,6 @@ def send_email_alert(to_email, subject, body):
     server.quit()
 
 
-app = Flask(__name__)
 if __name__ == '__main__':
     # init_db()
     app.run(debug=True)
